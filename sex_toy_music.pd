@@ -1,5 +1,5 @@
-#N canvas 624 85 690 550 10;
-#N canvas 128 360 274 193 osc_control 1;
+#N canvas 584 95 783 643 10;
+#N canvas 128 360 430 243 osc_control 1;
 #X obj 97 48 unpackOSC;
 #X obj 97 75 pipelist;
 #X obj 96 133 outlet;
@@ -13,179 +13,17 @@
 #X connect 5 0 2 0;
 #X connect 5 1 3 0;
 #X restore 177 8 pd osc_control;
-#X obj 142 452 vh_control;
-#X obj 263 452 tv_control;
-#X msg 152 283 open;
-#X msg 76 301 auto_poll;
-#X msg 31 336 stop_poll;
-#X msg 153 349 close;
-#X obj 30 410 metro 10;
-#X obj 31 377 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 144 504 vh_control;
+#X obj 265 504 tv_control;
+#X msg 154 335 open;
+#X msg 78 353 auto_poll;
+#X msg 33 388 stop_poll;
+#X msg 155 401 close;
+#X obj 32 462 metro 10;
+#X obj 33 429 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#N canvas 156 138 711 600 tv_sequencer 0;
-#X obj 98 14 inlet;
-#X obj 136 581 outlet;
-#X obj 29 102 tv_listbuilder;
-#X obj 28 72 routeOSC /1;
-#X obj 105 74 routeOSC /1;
-#X obj 181 103 list-math * 255;
-#X obj 181 129 list-math int;
-#X obj 163 223 vsl 15 128 0 255 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 0 1;
-#X obj 182 223 vsl 15 128 0 255 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 0 1;
-#X obj 201 223 vsl 15 128 0 255 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 0 1;
-#X obj 220 223 vsl 15 128 0 255 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 0 1;
-#X obj 238 223 vsl 15 128 0 255 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 0 1;
-#X obj 257 223 vsl 15 128 0 255 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 0 1;
-#X obj 276 223 vsl 15 128 0 255 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 0 1;
-#X obj 295 223 vsl 15 128 0 255 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 0 1;
-#X obj 315 223 vsl 15 128 0 255 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 0 1;
-#X obj 334 223 vsl 15 128 0 255 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 0 1;
-#X obj 353 223 vsl 15 128 0 255 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 0 1;
-#X obj 372 223 vsl 15 128 0 255 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 0 1;
-#X obj 390 223 vsl 15 128 0 255 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 0 1;
-#X obj 409 223 vsl 15 128 0 255 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 0 1;
-#X obj 428 223 vsl 15 128 0 255 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 0 1;
-#X obj 144 223 vsl 15 128 0 255 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 0 1;
-#X obj 145 161 unpack 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
-#X obj 144 357 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
-#X obj 163 357 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
-#X obj 182 357 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
-#X obj 201 357 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
-#X obj 219 357 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
-#X obj 238 357 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
-#X obj 257 357 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
-#X obj 276 357 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
-#X obj 295 357 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
-#X obj 314 357 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
-#X obj 333 357 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
-#X obj 352 357 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
-#X obj 371 357 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
-#X obj 390 357 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
-#X obj 409 357 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
-#X obj 428 357 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
-#X obj 76 380 unpack 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
-#X obj 48 435 list-mult;
-#X obj 114 434 list-mult;
-#X obj 452 268 f;
-#X obj 489 267 + 1;
-#X obj 452 220 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
-#X obj 452 290 mod 16;
-#X obj 136 554 list-seek;
-#X obj 98 39 routeOSC /mt1 /mt2 /mf1 /mf2 /tt /tf;
-#X obj 490 187 i;
-#X obj 491 86 * 200;
-#X obj 491 163 * 1000;
-#X obj 452 246 metro 100000;
-#X obj 491 136 expr 60 /$f1;
-#X obj 491 111 * 4;
-#X floatatom 528 112 5 0 0 0 - - -;
-#X obj 181 76 tv_listbuilder;
-#X floatatom 471 220 5 0 0 0 - - -;
-#X connect 0 0 48 0;
-#X connect 2 0 40 0;
-#X connect 2 0 41 0;
-#X connect 2 0 42 1;
-#X connect 3 0 2 0;
-#X connect 4 0 2 1;
-#X connect 5 0 6 0;
-#X connect 6 0 23 0;
-#X connect 6 0 41 1;
-#X connect 6 0 42 0;
-#X connect 23 0 22 0;
-#X connect 23 1 7 0;
-#X connect 23 2 8 0;
-#X connect 23 3 9 0;
-#X connect 23 4 10 0;
-#X connect 23 5 11 0;
-#X connect 23 6 12 0;
-#X connect 23 7 13 0;
-#X connect 23 8 14 0;
-#X connect 23 9 15 0;
-#X connect 23 10 16 0;
-#X connect 23 11 17 0;
-#X connect 23 12 18 0;
-#X connect 23 13 19 0;
-#X connect 23 14 20 0;
-#X connect 23 15 21 0;
-#X connect 40 0 24 0;
-#X connect 40 1 25 0;
-#X connect 40 2 26 0;
-#X connect 40 3 27 0;
-#X connect 40 4 28 0;
-#X connect 40 5 29 0;
-#X connect 40 6 30 0;
-#X connect 40 7 31 0;
-#X connect 40 8 32 0;
-#X connect 40 9 33 0;
-#X connect 40 10 34 0;
-#X connect 40 11 35 0;
-#X connect 40 12 36 0;
-#X connect 40 13 37 0;
-#X connect 40 14 38 0;
-#X connect 40 15 39 0;
-#X connect 41 0 47 1;
-#X connect 42 0 47 1;
-#X connect 43 0 44 0;
-#X connect 43 0 46 0;
-#X connect 44 0 43 1;
-#X connect 45 0 52 0;
-#X connect 46 0 47 0;
-#X connect 47 0 1 0;
-#X connect 48 0 3 0;
-#X connect 48 1 4 0;
-#X connect 48 2 56 0;
-#X connect 48 3 56 1;
-#X connect 48 4 45 0;
-#X connect 48 5 50 0;
-#X connect 49 0 57 0;
-#X connect 50 0 54 0;
-#X connect 50 0 55 0;
-#X connect 51 0 49 0;
-#X connect 52 0 43 0;
-#X connect 53 0 51 0;
-#X connect 54 0 53 0;
-#X connect 56 0 5 0;
-#X connect 57 0 52 1;
-#X coords 0 -1 1 1 385 175 1 125 200;
-#X restore 277 65 pd tv_sequencer;
-#X obj 34 66 vh_control_gui;
-#N canvas 0 22 351 187 vh_unpack 1;
+#N canvas 0 22 619 413 vh_unpack 1;
 #X obj 4 -11 inlet;
-#X obj 5 15 routeOSC /f1 /f2 /f3 /f4 /f5 /f6 /t1 /t2 /t3 /t4 /t5 /t6
-;
 #X obj 4 124 list-math int;
 #X obj 36 48 bondo 6;
 #X obj 4 79 pack 0 0 0 0 0 0;
@@ -194,38 +32,88 @@
 #X obj 199 86 pack 0 0 0 0 0 0;
 #X obj 199 114 outlet;
 #X obj 4 102 list-math * 64;
-#X connect 0 0 1 0;
-#X connect 1 0 3 0;
-#X connect 1 1 3 1;
-#X connect 1 2 3 2;
-#X connect 1 3 3 3;
-#X connect 1 4 3 4;
-#X connect 1 5 3 5;
-#X connect 1 6 6 0;
-#X connect 1 7 6 1;
-#X connect 1 8 6 2;
-#X connect 1 9 6 3;
-#X connect 1 10 6 4;
-#X connect 1 11 6 5;
-#X connect 2 0 5 0;
-#X connect 3 0 4 0;
-#X connect 3 1 4 1;
-#X connect 3 2 4 2;
-#X connect 3 3 4 3;
-#X connect 3 4 4 4;
-#X connect 3 5 4 5;
-#X connect 4 0 9 0;
+#X obj 5 15 routeOSC /f1 /f2 /f3 /f4 /f5 /f6 /t1 /t2 /t3 /t4 /t5 /t6
+;
+#X connect 0 0 9 0;
+#X connect 1 0 4 0;
+#X connect 2 0 3 0;
+#X connect 2 1 3 1;
+#X connect 2 2 3 2;
+#X connect 2 3 3 3;
+#X connect 2 4 3 4;
+#X connect 2 5 3 5;
+#X connect 3 0 8 0;
+#X connect 5 0 6 0;
+#X connect 5 1 6 1;
+#X connect 5 2 6 2;
+#X connect 5 3 6 3;
+#X connect 5 4 6 4;
+#X connect 5 5 6 5;
 #X connect 6 0 7 0;
-#X connect 6 1 7 1;
-#X connect 6 2 7 2;
-#X connect 6 3 7 3;
-#X connect 6 4 7 4;
-#X connect 6 5 7 5;
-#X connect 7 0 8 0;
+#X connect 8 0 1 0;
 #X connect 9 0 2 0;
-#X restore 176 34 pd vh_unpack;
-#X connect 0 0 11 0;
-#X connect 0 1 9 0;
+#X connect 9 1 2 1;
+#X connect 9 2 2 2;
+#X connect 9 3 2 3;
+#X connect 9 4 2 4;
+#X connect 9 5 2 5;
+#X connect 9 6 5 0;
+#X connect 9 7 5 1;
+#X connect 9 8 5 2;
+#X connect 9 9 5 3;
+#X connect 9 10 5 4;
+#X connect 9 11 5 5;
+#X restore 62 37 pd vh_unpack;
+#X msg 348 497 9;
+#X msg 387 499 12;
+#X msg 422 495 15;
+#X msg 457 495 16;
+#X msg 493 494 20;
+#X msg 526 493 26;
+#X msg 560 495 28;
+#N canvas 78 102 653 197 vh_seq 1;
+#X obj 233 143 outlet;
+#X obj 280 143 outlet;
+#X obj 329 144 outlet;
+#X obj 375 145 outlet;
+#X obj 422 144 outlet;
+#X obj 468 143 outlet;
+#X obj 135 107 vh_motor_seq;
+#X obj 324 6 inlet;
+#X obj 6 24 inlet;
+#X obj 7 59 routeOSC /vh1 /vh2 /vh3 /vh4 /vh5 /vh6;
+#X obj 220 107 vh_motor_seq;
+#X obj 302 108 vh_motor_seq;
+#X obj 384 108 vh_motor_seq;
+#X obj 468 109 vh_motor_seq;
+#X obj 551 109 vh_motor_seq;
+#X connect 6 0 0 0;
+#X connect 7 0 6 1;
+#X connect 7 0 10 1;
+#X connect 7 0 11 1;
+#X connect 7 0 12 1;
+#X connect 7 0 13 1;
+#X connect 7 0 14 1;
+#X connect 8 0 9 0;
+#X connect 9 0 6 0;
+#X connect 9 1 10 0;
+#X connect 9 2 11 0;
+#X connect 9 3 12 0;
+#X connect 9 4 13 0;
+#X connect 9 5 14 0;
+#X connect 10 0 1 0;
+#X connect 11 0 2 0;
+#X connect 12 0 3 0;
+#X connect 13 0 4 0;
+#X connect 14 0 5 0;
+#X restore 148 90 pd vh_seq;
+#X obj 41 124 vh_control_gui;
+#X obj 367 154 tv_sequencer;
+#X obj 328 36 tempo_control;
+#X connect 0 0 9 0;
+#X connect 0 0 17 0;
+#X connect 0 1 20 0;
+#X connect 0 1 19 0;
 #X connect 3 0 1 0;
 #X connect 3 0 2 0;
 #X connect 4 0 1 0;
@@ -237,7 +125,15 @@
 #X connect 7 0 1 0;
 #X connect 7 0 2 0;
 #X connect 8 0 7 0;
-#X connect 9 0 2 1;
-#X connect 10 0 1 1;
-#X connect 11 0 10 0;
-#X connect 11 1 10 1;
+#X connect 9 0 18 0;
+#X connect 9 1 18 1;
+#X connect 17 0 18 2;
+#X connect 17 1 18 3;
+#X connect 17 2 18 4;
+#X connect 17 3 18 5;
+#X connect 17 4 18 6;
+#X connect 17 5 18 7;
+#X connect 18 0 1 1;
+#X connect 19 0 2 1;
+#X connect 20 0 19 1;
+#X connect 20 0 17 1;
